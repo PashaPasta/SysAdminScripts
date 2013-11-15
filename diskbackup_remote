@@ -1,0 +1,4 @@
+#Backs up disk to a remote storage location
+#!/bin/bash
+
+dd bs=15M if=/dev/ENTERDISKLABELHERE conv=sync,noerror | ssh USERNAME@TARGET "gzip -9 > /path/to/save/to$(date +%y%m%d).gz"
