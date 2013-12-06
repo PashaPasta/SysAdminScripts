@@ -5,10 +5,18 @@
 # Run command in "PFXtoApacheSSLFormat.sh <cert.pfx> <desired output name>" format
 
 if [[ $1 == -h ]] ; then
-  printf "Run command in PFXtoApacheSSLFormat.sh <cert.pfx> <desired output name> format
+  printf "
+  
+  ##########PFXtoApacheSSLFormat Help##########
+  Run command in PFXtoApacheSSLFormat.sh <cert.pfx> <desired output name> format
+  
   "
   elif [[ $1 == --help ]] ; then 
-  printf "Run command in PFXtoApacheSSLFormat.sh <cert.pfx> <desired output name> format
+  printf "
+  
+  ##########PFXtoApacheSSLFormat Help##########
+  Run command in PFXtoApacheSSLFormat.sh <cert.pfx> <desired output name> format
+  
   "
   else
     openssl pkcs12 -in $1 -clcerts -nokeys -out $2.cer
